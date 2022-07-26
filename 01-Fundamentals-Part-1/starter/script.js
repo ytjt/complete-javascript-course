@@ -1,4 +1,5 @@
 /* 
+//====== lecture values and variables, data types ======
 let js = 'amazing';
 if (js === 'amazing') alert('JavaScript is FUN!');
 
@@ -17,7 +18,10 @@ year = 1998;
 console.log(year);
 console.log(typeof year);
 console.log(typeof null);
+*/
 
+/*
+// ====== lecture let, const and var ======
 let age = 30;
 age = 31;
 
@@ -25,7 +29,10 @@ const birthYear = 1991;
 birthYear = 1990;
 
 const job;
+*/
 
+/*
+// ====== lecture basic operators ======
 const now = 2022;
 const ageYtjt = now - 2000;
 console.log(ageYtjt);
@@ -33,7 +40,7 @@ console.log(ageYtjt * 10, ageYtjt / 10, 2 ** 3); // 2**3 means 2 to the power of
 
 const firstName = 'Ytjt';
 const lastName = 'iykyk';
-console.log(firstName + lastName);
+console.log(firstName + lastName); // String concatenate
 console.log(firstName + ' ' + lastName);
 
 let x = 10 + 5;
@@ -46,8 +53,51 @@ console.log(ageIykYk >= 30);
 const isAdult = ageIykYk >= 18;
 */
 
-// ============================ ASSIGNMENTS ============================
+/*
+// ====== lecture string and template literals ======
+const fName = 'Ytjt';
+const sName = 'Iykyk';
+const job = 'Software Engineer';
+const bYear = 1998;
+const y = 2025;
+
+const ytjt = "i'm " + fName + ', a ' + (y - bYear) + ' years old ' + job + '!';
+console.log(ytjt);
+//Template literals
+const ytjtNew = `I'm ${fName}, a ${y - bYear} years old ${job}!`;
+console.log(ytjtNew);
+
+console.log(`Just a regular string...`);
+
+console.log(`Just 
+a 
+regular 
+string...`);
+*/
+
 /* 
+// ====== lecture if else statements control structure ======
+const age = 17;
+
+if (age >= 18) {
+  console.log('Ytjt can start their driving license');
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Ytjt is too young. Wait another ${yearsLeft} year :)`);
+}
+
+const birthYear = 1991;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+ */
+
+// ============================ ASSIGNMENTS ============================
+
 // Assignment 011 - Values And Variables
 
 let country = 'South Korea';
@@ -83,7 +133,7 @@ console.log(population > populationFinland);
 const avgPopulation = 33000000;
 console.log(population < avgPopulation);
 const description =
-  population +
+  country +
   ' is in ' +
   continent +
   ', and its ' +
@@ -91,9 +141,24 @@ const description =
   ' people speak ' +
   language;
 console.log(description);
- */
-// ========================= CODING CHALLENGE =========================
 
+// Assignment 015 - Strings and Template Literals
+
+const description2 = `${country} is in ${continent}, and its ${population} people speak ${language}.`;
+console.log(description2);
+
+// Assignment 016 - Taking Decisions: if/else Statements
+
+// let population = 130000000;
+if (population >= 33000000) {
+  console.log(`${country}'s population is above average.`);
+} else {
+  console.log(
+    `${country}'s population is ${avgPopulation - population} below average.`
+  );
+}
+// ========================= CODING CHALLENGE =========================
+/* 
 // Coding Challenge #1
 
 //Data 1
@@ -128,3 +193,4 @@ const bmiJohn2 = johnMass2 / johnHeight2 ** 2;
 markHigherBMI = bmiMark2 > bmiJohn2;
 console.log(bmiMark2, bmiJohn2);
 console.log(markHigherBMI);
+ */
