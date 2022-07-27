@@ -60,7 +60,7 @@ if (population >= 33000000) {
   );
 }
  */
-//Assignment 017 -Type Conversion and Coercion
+/* //Assignment 017 -Type Conversion and Coercion
 console.log('9' - '5'); // 4 ✅
 console.log('19' - '13' + '17'); // 617 ✅
 console.log('19' - '13' + 17); // 23 ✅
@@ -68,7 +68,31 @@ console.log('123' < 57); // false ✅
 console.log(5 + 6 + '4' + 9 - 4 - 2); // 117 ❌ 1143 ✅
 console.log('7' + 3 + 2); //75 ❌ 732 ✅
 console.log('7' + 3 - 2); //71 ✅
-console.log(5 + 6 + '4' + 9 * 4 * 2); // 11472
+console.log(5 + 6 + '4' + 9 * 4 * 2); // 11472 ✅ */
+
+// Assignment 018 - Equality Operators: == vs. ===
+// const numNeighbours = prompt(
+//   'How many neighbour countries does your country have?');
+
+// if (numNeighbours == 1) {
+//   console.log('Only 1 border!');
+// } else if (numNeighbours > 1) {
+//   console.log('More than 1 border');
+// } else {
+//   console.log('No borders');
+// }
+
+const numNeighbours = Number(
+  prompt('How many neighbour countries does your country have?')
+);
+
+if (numNeighbours === 1) {
+  console.log('Only 1 border!');
+} else if (numNeighbours > 1) {
+  console.log('More than 1 border');
+} else {
+  console.log('No borders');
+}
 // ========================= CODING CHALLENGE =========================
 /* 
 ///////////// Coding Challenge #1 /////////////
