@@ -1,101 +1,3 @@
-/* 
-//====== lecture values and variables, data types ======
-let js = 'amazing';
-if (js === 'amazing') alert('JavaScript is FUN!');
-
-console.log(40 + 8 + 23 - 10);
-
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
-console.log(typeof javascriptIsFun);
-console.log(typeof true);
-console.log(typeof 'ytjt');
-console.log(typeof 23);
-let year;
-console.log(year);
-console.log(typeof year);
-year = 1998;
-console.log(year);
-console.log(typeof year);
-console.log(typeof null);
-*/
-
-/*
-// ====== lecture let, const and var ======
-let age = 30;
-age = 31;
-
-const birthYear = 1991;
-birthYear = 1990;
-
-const job;
-*/
-
-/*
-// ====== lecture basic operators ======
-const now = 2022;
-const ageYtjt = now - 2000;
-console.log(ageYtjt);
-console.log(ageYtjt * 10, ageYtjt / 10, 2 ** 3); // 2**3 means 2 to the power of 3. 2^3. 2 * 2 * 2.
-
-const firstName = 'Ytjt';
-const lastName = 'iykyk';
-console.log(firstName + lastName); // String concatenate
-console.log(firstName + ' ' + lastName);
-
-let x = 10 + 5;
-x += 10;
-console.log(x);
-const ageIykYk = now - 2001;
-console.log(ageYtjt > ageIykYk);
-console.log(ageIykYk >= 30);
-
-const isAdult = ageIykYk >= 18;
-*/
-
-/*
-// ====== lecture string and template literals ======
-const fName = 'Ytjt';
-const sName = 'Iykyk';
-const job = 'Software Engineer';
-const bYear = 1998;
-const y = 2025;
-
-const ytjt = "i'm " + fName + ', a ' + (y - bYear) + ' years old ' + job + '!';
-console.log(ytjt);
-//Template literals
-const ytjtNew = `I'm ${fName}, a ${y - bYear} years old ${job}!`;
-console.log(ytjtNew);
-
-console.log(`Just a regular string...`);
-
-console.log(`Just 
-a 
-regular 
-string...`);
-*/
-
-/* 
-// ====== lecture if else statements control structure ======
-const age = 17;
-
-if (age >= 18) {
-  console.log('Ytjt can start their driving license');
-} else {
-  const yearsLeft = 18 - age;
-  console.log(`Ytjt is too young. Wait another ${yearsLeft} year :)`);
-}
-
-const birthYear = 1991;
-let century;
-if (birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
-}
-console.log(century);
- */
-
 // ============================ ASSIGNMENTS ============================
 /* 
 // Assignment 011 - Values And Variables
@@ -215,7 +117,7 @@ if (markHigherBMI) {
  */
 
 ///////////// Coding Challenge #3 /////////////
-
+/* 
 //Task 1
 const avgDolphin = (96 + 108 + 89) / 3;
 const avgKoala = (88 + 91 + 110) / 3;
@@ -229,7 +131,7 @@ if (avgDolphin > avgKoala) {
 } else {
   console.log('Its a DRAW!');
 }
-
+ */
 /* 
 //BONUS 1
 const avgDolphin = (97 + 112 + 101) / 3;
@@ -260,3 +162,14 @@ if (avgDolphin === avgKoala && avgDolphin >= 100 && avgKoala >= 100) {
   console.log('No one wins LOL');
 }
  */
+///////////// Coding Challenge #4 /////////////
+
+//TASK 1
+const bill = 430;
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value is ${
+    bill + tip
+  }.`
+);
