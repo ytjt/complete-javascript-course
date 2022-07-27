@@ -159,8 +159,8 @@ if (population >= 33000000) {
 }
  */
 // ========================= CODING CHALLENGE =========================
-
-// Coding Challenge #1
+/* 
+///////////// Coding Challenge #1 /////////////
 
 //Data 1
 const markMass1 = 78;
@@ -195,7 +195,7 @@ markHigherBMI = bmiMark2 > bmiJohn2;
 console.log(bmiMark2, bmiJohn2);
 console.log(markHigherBMI);
 
-//Coding Challenge #2
+///////////// Coding Challenge #2 /////////////
 
 if (markHigherBMI) {
   console.log(`Mark's BMI is higher than John's!
@@ -212,3 +212,47 @@ if (markHigherBMI) {
 //   console.log(`John's BMI is higher than Mark's!
 //   John's BMI (${bmiJohn1}) is higher than Mark's BMI (${bmiMark1})`);
 // }
+ */
+
+///////////// Coding Challenge #3 /////////////
+/* 
+//Task 1
+const avgDolphin = (88 + 91 + 110) / 2;
+const avgKoala = (96 + 108 + 89) / 2;
+
+// Task 2
+if (avgDolphin > avgKoala) {
+  console.log('Winner is Dolphins!');
+} else if (avgKoala > avgDolphin) {
+  console.log('Winner is Koalas!');
+} else {
+  console.log('Its a DRAW!');
+}
+ */
+/* 
+//BONUS 1
+const avgDolphin = (97 + 112 + 101) / 2;
+const avgKoala = (109 + 95 + 123) / 2;
+
+if (avgDolphin > avgKoala && avgDolphin >= 100) {
+  console.log('Winner is Dolphins!');
+} else if (avgKoala > avgDolphin && avgKoala >= 100) {
+  console.log('Winner is Koalas!');
+} else {
+  console.log('Its a DRAW!');
+}
+ */
+
+//BONUS 2
+const avgDolphin = (97 + 112 + 101) / 2;
+const avgKoala = (109 + 95 + 106) / 2;
+
+if (avgDolphin === avgKoala && avgDolphin >= 100 && avgKoala >= 100) {
+  console.log("It's a DRAW!");
+} else if (avgDolphin >= 100 && avgDolphin > avgKoala) {
+  console.log('Winner is DOLPHINS!');
+} else if (avgKoala >= 100 && avgKoala > avgDolphin) {
+  console.log('Winner is KOALAS!');
+} else {
+  console.log('No one wins LOL');
+}
