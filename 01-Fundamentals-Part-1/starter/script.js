@@ -94,7 +94,7 @@ if (numNeighbours === 1) {
   console.log('No borders');
 } */
 
-//Assignment 019 - Logical Operators
+/* //Assignment 019 - Logical Operators
 
 const country = 'South Korea';
 const continent = 'Asia';
@@ -112,6 +112,26 @@ if (language === 'English' && population < 50000000 && !isIsland) {
   console.log(`You should live in ${country}! :)`);
 } else {
   console.log(`${country} does not meet your criteria :(`);
+} */
+
+//Assignment 020 - The switch statement
+const language = 'Hangul';
+
+switch (language) {
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log('Great language too! :D');
 }
 // ========================= CODING CHALLENGE =========================
 /* 
