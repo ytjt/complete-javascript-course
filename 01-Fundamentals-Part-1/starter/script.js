@@ -217,8 +217,9 @@ if (markHigherBMI) {
 ///////////// Coding Challenge #3 /////////////
 /* 
 //Task 1
-const avgDolphin = (88 + 91 + 110) / 2;
-const avgKoala = (96 + 108 + 89) / 2;
+const avgDolphin = (88 + 91 + 110) / 3;
+const avgKoala = (96 + 108 + 89) / 3;
+console.log(avgDolphin, avgKoala);
 
 // Task 2
 if (avgDolphin > avgKoala) {
@@ -228,11 +229,12 @@ if (avgDolphin > avgKoala) {
 } else {
   console.log('Its a DRAW!');
 }
- */
+*/
 /* 
 //BONUS 1
-const avgDolphin = (97 + 112 + 101) / 2;
-const avgKoala = (109 + 95 + 123) / 2;
+const avgDolphin = (97 + 112 + 101) / 3;
+const avgKoala = (109 + 95 + 123) / 3;
+console.log(avgDolphin, avgKoala);
 
 if (avgDolphin > avgKoala && avgDolphin >= 100) {
   console.log('Winner is Dolphins!');
@@ -244,8 +246,9 @@ if (avgDolphin > avgKoala && avgDolphin >= 100) {
  */
 
 //BONUS 2
-const avgDolphin = (97 + 112 + 101) / 2;
-const avgKoala = (109 + 95 + 106) / 2;
+const avgDolphin = (97 + 112 + 101) / 3;
+const avgKoala = (109 + 95 + 106) / 3;
+console.log(avgDolphin, avgKoala);
 
 if (avgDolphin === avgKoala && avgDolphin >= 100 && avgKoala >= 100) {
   console.log("It's a DRAW!");
