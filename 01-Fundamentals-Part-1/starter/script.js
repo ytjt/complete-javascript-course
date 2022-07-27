@@ -1,6 +1,6 @@
 // ============================ ASSIGNMENTS ============================
-/* 
-// Assignment 011 - Values And Variables
+
+/* // Assignment 011 - Values And Variables
 
 let country = 'South Korea';
 let continent = 'Asia';
@@ -8,9 +8,9 @@ let population = 51780000;
 
 console.log(country);
 console.log(continent);
-console.log(population);
+console.log(population); */
 
-//Assignment 012 - Data Types
+/* //Assignment 012 - Data Types
 
 const isIsland = true;
 let language;
@@ -18,14 +18,14 @@ let language;
 console.log(isIsland);
 console.log(population);
 console.log(country);
-console.log(language);
+console.log(language); */
 
-// Assignment 013 - let, const and var
+/* // Assignment 013 - let, const and var
 
 language = 'Hangul';
-// isIsland = false;
+// isIsland = false; */
 
-// Assignment 014 - Basic Operators
+/* // Assignment 014 - Basic Operators
 
 console.log(population / 2);
 population += 1;
@@ -42,14 +42,14 @@ const description =
   population +
   ' people speak ' +
   language;
-console.log(description);
+console.log(description); */
 
-// Assignment 015 - Strings and Template Literals
+/* // Assignment 015 - Strings and Template Literals
 
 const description2 = `${country} is in ${continent}, and its ${population} people speak ${language}.`;
-console.log(description2);
+console.log(description2); */
 
-// Assignment 016 - Taking Decisions: if/else Statements
+/* // Assignment 016 - Taking Decisions: if/else Statements
 
 // let population = 130000000;
 if (population >= 33000000) {
@@ -58,8 +58,8 @@ if (population >= 33000000) {
   console.log(
     `${country}'s population is ${avgPopulation - population} below average.`
   );
-}
- */
+} */
+
 /* //Assignment 017 -Type Conversion and Coercion
 console.log('9' - '5'); // 4 ✅
 console.log('19' - '13' + '17'); // 617 ✅
@@ -70,7 +70,7 @@ console.log('7' + 3 + 2); //75 ❌ 732 ✅
 console.log('7' + 3 - 2); //71 ✅
 console.log(5 + 6 + '4' + 9 * 4 * 2); // 11472 ✅ */
 
-// Assignment 018 - Equality Operators: == vs. ===
+/* // Assignment 018 - Equality Operators: == vs. ===
 // const numNeighbours = prompt(
 //   'How many neighbour countries does your country have?');
 
@@ -92,6 +92,26 @@ if (numNeighbours === 1) {
   console.log('More than 1 border');
 } else {
   console.log('No borders');
+} */
+
+//Assignment 019 - Logical Operators
+
+const country = 'South Korea';
+const continent = 'Asia';
+const population = 51780000;
+const isIsland = true;
+const language = 'Hangul';
+
+console.log(country);
+console.log(continent);
+console.log(population);
+console.log(language);
+console.log(isIsland);
+
+if (language === 'English' && population < 50000000 && !isIsland) {
+  console.log(`You should live in ${country}! :)`);
+} else {
+  console.log(`${country} does not meet your criteria :(`);
 }
 // ========================= CODING CHALLENGE =========================
 /* 
