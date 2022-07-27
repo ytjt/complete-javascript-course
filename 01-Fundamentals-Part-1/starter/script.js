@@ -60,6 +60,15 @@ if (population >= 33000000) {
   );
 }
  */
+//Assignment 017 -Type Conversion and Coercion
+console.log('9' - '5'); // 4 ✅
+console.log('19' - '13' + '17'); // 617 ✅
+console.log('19' - '13' + 17); // 23 ✅
+console.log('123' < 57); // false ✅
+console.log(5 + 6 + '4' + 9 - 4 - 2); // 117 ❌ 1143 ✅
+console.log('7' + 3 + 2); //75 ❌ 732 ✅
+console.log('7' + 3 - 2); //71 ✅
+console.log(5 + 6 + '4' + 9 * 4 * 2); // 11472
 // ========================= CODING CHALLENGE =========================
 /* 
 ///////////// Coding Challenge #1 /////////////
@@ -164,7 +173,7 @@ if (avgDolphin === avgKoala && avgDolphin >= 100 && avgKoala >= 100) {
  */
 ///////////// Coding Challenge #4 /////////////
 
-//TASK 1
+/* //TASK 1
 const bill = 430;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
@@ -172,4 +181,4 @@ console.log(
   `The bill was ${bill}, the tip was ${tip}, and the total value is ${
     bill + tip
   }.`
-);
+); */
