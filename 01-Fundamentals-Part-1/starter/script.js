@@ -97,7 +97,7 @@ console.log(century);
  */
 
 // ============================ ASSIGNMENTS ============================
-
+/* 
 // Assignment 011 - Values And Variables
 
 let country = 'South Korea';
@@ -157,8 +157,9 @@ if (population >= 33000000) {
     `${country}'s population is ${avgPopulation - population} below average.`
   );
 }
+ */
 // ========================= CODING CHALLENGE =========================
-/* 
+
 // Coding Challenge #1
 
 //Data 1
@@ -193,4 +194,21 @@ const bmiJohn2 = johnMass2 / johnHeight2 ** 2;
 markHigherBMI = bmiMark2 > bmiJohn2;
 console.log(bmiMark2, bmiJohn2);
 console.log(markHigherBMI);
- */
+
+//Coding Challenge #2
+
+if (markHigherBMI) {
+  console.log(`Mark's BMI is higher than John's!
+  Mark's BMI (${bmiMark2}) is higher than John's BMI (${bmiJohn2})`);
+} else {
+  console.log(`John's BMI is higher than Mark's!
+  John's BMI (${bmiJohn2}) is higher than Mark's BMI (${bmiMark2})`);
+}
+
+// if (markHigherBMI) {
+//   console.log(`Mark's BMI is higher than John's!
+//   Mark's BMI (${bmiMark1}) is higher than John's BMI (${bmiJohn1})`);
+// } else {
+//   console.log(`John's BMI is higher than Mark's!
+//   John's BMI (${bmiJohn1}) is higher than Mark's BMI (${bmiMark1})`);
+// }
