@@ -114,7 +114,7 @@ if (language === 'English' && population < 50000000 && !isIsland) {
   console.log(`${country} does not meet your criteria :(`);
 } */
 
-//Assignment 020 - The switch statement
+/* //Assignment 020 - The switch statement
 const language = 'Hangul';
 
 switch (language) {
@@ -132,7 +132,26 @@ switch (language) {
     break;
   default:
     console.log('Great language too! :D');
-}
+} */
+
+//Assignment 021 - The Conditional (Ternary) Operator
+const country = 'South Korea';
+const continent = 'Asia';
+const population = 51780000;
+const isIsland = true;
+const language = 'Hangul';
+
+population > 33000000
+  ? console.log(`${country}'s population is above average.`)
+  : console.log(`${country}'s population is below average.`);
+
+const test =
+  population > 33000000
+    ? `${country}'s population is above average.`
+    : `${country}'s population is below average.`;
+
+console.log(test);
+
 // ========================= CODING CHALLENGE =========================
 /* 
 ///////////// Coding Challenge #1 /////////////
