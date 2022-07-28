@@ -87,7 +87,7 @@ console.log(yearsUntilRetirement(1991, 'YTJT'));
 console.log(yearsUntilRetirement(1950, 'Po'));
  */
 
-// Arrays
+/* // Arrays
 
 //Literal Syntax
 const friends = ['Fatin', 'Liyana', 'Yuna', 'Minji'];
@@ -119,4 +119,42 @@ console.log(calcAge(years[years.length - 1]));
 console.log(calcAge(years[0]));
 
 const ages = [calcAge(years[0]), calcAge(years[years.length - 1])];
-console.log(ages);
+console.log(ages); */
+
+// Array Methods
+const friends = ['Fatin', 'Liyana', 'Yuna', 'Minji'];
+
+// Add element to the end of the array
+friends.push('Jiwon');
+console.log(friends);
+console.log(friends.length);
+
+const newLength = friends.push('Juyeon');
+console.log(friends);
+console.log(newLength); // 6
+console.log(friends.length); // 6
+
+// Add element to the beginning of the array
+friends.unshift('Sabrina');
+console.log(friends);
+
+//Removing the last elements in the array
+friends.pop();
+console.log(friends);
+
+const popped = friends.pop();
+console.log(friends);
+console.log(popped); // Jiwon
+
+//Removing the first element in the array
+friends.shift();
+console.log(friends);
+const shifted = friends.shift();
+console.log(friends);
+console.log(shifted); // Fatin
+
+console.log(friends.indexOf('Yuna'));
+console.log(friends.indexOf('Fatin')); // -1
+
+console.log(friends.includes('Yuna'));
+console.log(friends.includes('Fatin'));
