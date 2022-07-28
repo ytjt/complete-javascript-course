@@ -66,7 +66,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, 'YTJT')); */
 
-const calcAge = function (birthYear) {
+/* const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
 
@@ -85,3 +85,38 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'YTJT'));
 console.log(yearsUntilRetirement(1950, 'Po'));
+ */
+
+// Arrays
+
+//Literal Syntax
+const friends = ['Fatin', 'Liyana', 'Yuna', 'Minji'];
+console.log(friends);
+
+// Alternative syntax
+const y = new Array(1998, 2000, 2001, 2002);
+
+console.log(friends[2], friends[3]);
+
+console.log(friends.length); // array size
+console.log(friends[friends.length - 1]); // retrieve last element
+
+friends[1] = 'Sabrina';
+console.log(friends);
+
+const firstName = 'Ytjt';
+const ytjt = [firstName, 'Iykyk', 2022 - 1998, 'student', friends];
+console.log(ytjt);
+
+// Exercise
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+console.log(calcAge(years[years.length - 1]));
+console.log(calcAge(years[0]));
+
+const ages = [calcAge(years[0]), calcAge(years[years.length - 1])];
+console.log(ages);
