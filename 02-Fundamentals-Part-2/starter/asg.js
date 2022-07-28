@@ -11,21 +11,30 @@
 /* ----- LECTURE 02: FUNCTION DECLARATIONS VS EXPRESSION ----- */
 
 //FUNCTION DECLARATION
-function percentageOfWorld1(population) {
-  const worldPopulation = 7900;
-  return `${(population / worldPopulation) * 100}%`;
-}
+// function percentageOfWorld1(population) {
+//   const worldPopulation = 7900;
+//   return `${(population / worldPopulation) * 100}%`;
+// }
 
-console.log(percentageOfWorld1(33.8));
-console.log(percentageOfWorld1(51.98));
-console.log(percentageOfWorld1(124.9));
+// console.log(percentageOfWorld1(33.8));
+// console.log(percentageOfWorld1(51.98));
+// console.log(percentageOfWorld1(124.9));
 
 //FUNCTION EXPRESSION
-const percentageOfWorld2 = function (population) {
-  const worldPopulation = 7900;
-  return `${(population / worldPopulation) * 100}%`;
-};
+// const percentageOfWorld2 = function (population) {
+//   const worldPopulation = 7900;
+//   return `${(population / worldPopulation) * 100}%`;
+// };
 
-console.log(percentageOfWorld1(33.8));
-console.log(percentageOfWorld1(51.98));
-console.log(percentageOfWorld1(124.9));
+// console.log(percentageOfWorld2(33.8));
+// console.log(percentageOfWorld2(51.98));
+// console.log(percentageOfWorld2(124.9));
+
+/* ----- LECTURE 03: ARROW FUNCTIONS ----- */
+
+const percentageOfWorld3 = (population) =>
+  `${(population / worldPopulation) * 100}%`;
+
+console.log(percentageOfWorld3(33.8));
+console.log(percentageOfWorld3(51.98));
+console.log(percentageOfWorld3(124.9));
