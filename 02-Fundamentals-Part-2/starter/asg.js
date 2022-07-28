@@ -32,8 +32,7 @@
 
 /* ----- LECTURE 03: ARROW FUNCTIONS ----- */
 
-const percentageOfWorld3 = (population) =>
-  `${(population / worldPopulation) * 100}%`;
+const percentageOfWorld3 = (population) => `${(population / 7900) * 100}%`;
 
 console.log(percentageOfWorld3(33.8));
 console.log(percentageOfWorld3(51.98));
