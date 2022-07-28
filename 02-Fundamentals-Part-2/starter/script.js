@@ -257,6 +257,53 @@
 
 /* ---- LOOPING ARRAYS ---- */
 
+// const ytjtArray = [
+//   'Ytjt',
+//   2037 - 2020,
+//   'Iykyk',
+//   ['Jiwon', 'Yuna', 'Sooyoung'],
+//   false,
+// ];
+// const types = []; // empty array
+
+// for (let i = 0; i < ytjtArray.length; i++) {
+//   // Reading
+//   console.log(ytjtArray[i], typeof ytjtArray[i]);
+
+//   // Filling
+//   // types[i] = typeof ytjtArray[i];
+//   types.push(typeof ytjtArray[i]);
+// }
+
+// console.log(types);
+
+// const years = [2000, 2001, 2002, 2003, 2004];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2037 - years[i]);
+// }
+// console.log(ages);
+
+// // Continue and break
+// console.log('---- ONLY STRING ----');
+// for (let i = 0; i < ytjtArray.length; i++) {
+//   if (typeof ytjtArray[i] !== 'string') continue; // continue - immediately exit the current ITERATION
+
+//   console.log(ytjtArray[i], typeof ytjtArray[i]);
+// }
+
+// console.log('---- BREAK WITH NUMBER ----');
+
+// for (let i = 0; i < ytjtArray.length; i++) {
+//   if (typeof ytjtArray[i] === 'number') break; // break - immediately exit the current LOOP
+
+//   console.log(ytjtArray[i], typeof ytjtArray[i]);
+// }
+
+/* ---- LOOPING ARRAYS BACKWARDS & LOOPS IN LOOPS (NESTED LOOPS) ---- */
+
+// Loop arrays backwards
 const ytjtArray = [
   'Ytjt',
   2037 - 2020,
@@ -264,39 +311,16 @@ const ytjtArray = [
   ['Jiwon', 'Yuna', 'Sooyoung'],
   false,
 ];
-const types = []; // empty array
 
-for (let i = 0; i < ytjtArray.length; i++) {
-  // Reading
-  console.log(ytjtArray[i], typeof ytjtArray[i]);
-
-  // Filling
-  // types[i] = typeof ytjtArray[i];
-  types.push(typeof ytjtArray[i]);
+for (let i = ytjtArray.length - 1; i >= 0; i--) {
+  console.log(i, ytjtArray[i]);
 }
 
-console.log(types);
+// Nested Loop
+for( let exercise = 1; exercise < 4; exercise++){
+  console.log(`------ Starting exercise ${exercise}`);
 
-const years = [2000, 2001, 2002, 2003, 2004];
-const ages = [];
-
-for (let i = 0; i < years.length; i++) {
-  ages.push(2037 - years[i]);
-}
-console.log(ages);
-
-// Continue and break
-console.log('---- ONLY STRING ----');
-for (let i = 0; i < ytjtArray.length; i++) {
-  if (typeof ytjtArray[i] !== 'string') continue; // continue - immediately exit the current ITERATION
-
-  console.log(ytjtArray[i], typeof ytjtArray[i]);
-}
-
-console.log('---- BREAK WITH NUMBER ----');
-
-for (let i = 0; i < ytjtArray.length; i++) {
-  if (typeof ytjtArray[i] === 'number') break; // break - immediately exit the current LOOP
-
-  console.log(ytjtArray[i], typeof ytjtArray[i]);
+  for(let rep = 1; rep < 6; rep++){
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 😇`);
+  }
 }
