@@ -213,44 +213,90 @@
 
 /* ---- OBJECT METHODS ---- */
 
-const ytjt = {
-  firstName: 'Ytjt',
-  lastName: 'Iykyk',
-  birthYear: 1990,
-  friends: ['Jiwon', 'Yuna', 'Sooyoung'],
-  hasDriversLicense: true,
+// const ytjt = {
+//   firstName: 'Ytjt',
+//   lastName: 'Iykyk',
+//   birthYear: 1990,
+//   friends: ['Jiwon', 'Yuna', 'Sooyoung'],
+//   hasDriversLicense: true,
 
-  // Use function expression (property: function value)
-  // calcAge: function(birthYear){ // Method - any function that is attached to an object
-  //   return 2022 - birthYear;
-  // }
+//   // Use function expression (property: function value)
+//   // calcAge: function(birthYear){ // Method - any function that is attached to an object
+//   //   return 2022 - birthYear;
+//   // }
 
-  // calcAge: function () {
-  //   // this - points to 'this' object
-  //   console.log(this);
-  //   return 2022 - this.birthYear;
-  // },
+//   // calcAge: function () {
+//   //   // this - points to 'this' object
+//   //   console.log(this);
+//   //   return 2022 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2022 - this.birthYear; // creates new property in the object called 'age' and assign the value.
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2022 - this.birthYear; // creates new property in the object called 'age' and assign the value.
+//     return this.age;
+//   },
 
-  getSummary: function () {
-    return `${
-      this.firstName
-    } is ${this.calcAge()} years old, and she has ${(this.hasDriversLicense =
-      this.hasDriversLicense ? `a` : `no`)} drivers license.`;
-  },
-};
+//   getSummary: function () {
+//     return `${
+//       this.firstName
+//     } is ${this.calcAge()} years old, and she has ${(this.hasDriversLicense =
+//       this.hasDriversLicense ? `a` : `no`)} drivers license.`;
+//   },
+// };
 
-console.log(ytjt.calcAge(1990));
-console.log(ytjt['calcAge'](1990));
+// console.log(ytjt.calcAge(1990));
+// console.log(ytjt['calcAge'](1990));
 
-console.log(ytjt.calcAge()); // when have 'this' keyword
+// console.log(ytjt.calcAge()); // when have 'this' keyword
 
-console.log(ytjt.age);
+// console.log(ytjt.age);
 
-// Challenge - getSummary() function
-// "Ytjt is 46-year old, and she has a/no driver's license."
-console.log(ytjt.getSummary());
+// // Challenge - getSummary() function
+// // "Ytjt is 46-year old, and she has a/no driver's license."
+// console.log(ytjt.getSummary());
+
+/* ---- LOOPING ARRAYS ---- */
+
+const ytjtArray = [
+  'Ytjt',
+  2037 - 2020,
+  'Iykyk',
+  ['Jiwon', 'Yuna', 'Sooyoung'],
+  false,
+];
+const types = []; // empty array
+
+for (let i = 0; i < ytjtArray.length; i++) {
+  // Reading
+  console.log(ytjtArray[i], typeof ytjtArray[i]);
+
+  // Filling
+  // types[i] = typeof ytjtArray[i];
+  types.push(typeof ytjtArray[i]);
+}
+
+console.log(types);
+
+const years = [2000, 2001, 2002, 2003, 2004];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// Continue and break
+console.log('---- ONLY STRING ----');
+for (let i = 0; i < ytjtArray.length; i++) {
+  if (typeof ytjtArray[i] !== 'string') continue; // continue - immediately exit the current ITERATION
+
+  console.log(ytjtArray[i], typeof ytjtArray[i]);
+}
+
+console.log('---- BREAK WITH NUMBER ----');
+
+for (let i = 0; i < ytjtArray.length; i++) {
+  if (typeof ytjtArray[i] === 'number') break; // break - immediately exit the current LOOP
+
+  console.log(ytjtArray[i], typeof ytjtArray[i]);
+}
