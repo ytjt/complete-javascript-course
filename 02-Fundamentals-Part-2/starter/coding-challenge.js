@@ -1,7 +1,7 @@
 'use strict';
 /* ----- CODING CHALLENGE #1 ----- */
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 2;
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 // Test Data 1
 const avgDolphins = calcAverage(44, 23, 71);
