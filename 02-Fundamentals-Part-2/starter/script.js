@@ -159,23 +159,98 @@
 // console.log(friends.includes('Fatin'));
 
 /* ---- INTRODUCTION TO OBJECTS ---- */
-// Array
-const ytjtArray = [
-  'Ytjt',
-  'Iykyk',
-  2037 - 2020,
-  ['Jiwon', 'Yuna', 'Sooyoung']
-];
+// // Array - can hold different type of data.
+// const ytjtArray = ['Ytjt', 'Iykyk', 2037 - 2020, ['Jiwon', 'Yuna', 'Sooyoung']];
 
-// Object literal syntax
-// 1. Order of value does not matter
-// 2. Unstructured data
-// 3. retrieve data from its name
-// property: value
-// 4 properties / keys
+// // Object literal syntax
+// // 1. Order of value does not matter
+// // 2. Unstructured data
+// // 3. retrieve data from its name
+// // property: value
+// // 4 properties / keys
+// const ytjt = {
+//   firstName: 'Ytjt',
+//   lastName: 'Iykyk',
+//   age: 2037 - 2020,
+//   friends: ['Jiwon', 'Yuna', 'Sooyoung'],
+// };
+
+// console.log(ytjt);
+
+// // Dot Notation
+// console.log(ytjt.lastName); // objectName.property
+
+// //Brackets Notation - Compute
+// console.log(ytjt['lastName']); // objectName[expression]
+
+// const nameKey = 'Name';
+// console.log(ytjt['first' + nameKey]);
+// console.log(ytjt['last' + nameKey]);
+
+// const interestedIn = prompt(
+//   'What do you want to know about ytjt? Choose between firstName, lastName, age and friends'
+// );
+
+// // console.log(ytjt.interestedIn); // undefined - because no property called interestedIn
+
+// if (ytjt[interestedIn]) {
+//   console.log(ytjt[interestedIn]);
+// } else {
+//   console.log(
+//     `Wrong request. '${interestedIn}' choice is not available. Choose between firstName, lastName, age and friends`
+//   );
+// }
+
+// ytjt.location = 'South Korea';
+// ytjt['favouriteFood'] = 'Ramyeon';
+// console.log(ytjt);
+
+// // Challenge
+// // "Ytjt has 3 friends, and her bestfriend is called Yuna."
+// console.log(
+//   `${ytjt.firstName} has ${ytjt.friends.length} friends, and her bestfriend is called ${ytjt.friends[1]}`
+// );
+
+/* ---- OBJECT METHODS ---- */
+
 const ytjt = {
-  firstName : 'Ytjt',
-  lastName : 'Iykyk',
-  age: 2037 - 2020,
-  friends: ['Jiwon', 'Yuna', 'Sooyoung']
+  firstName: 'Ytjt',
+  lastName: 'Iykyk',
+  birthYear: 1990,
+  friends: ['Jiwon', 'Yuna', 'Sooyoung'],
+  hasDriversLicense: true,
+
+  // Use function expression (property: function value)
+  // calcAge: function(birthYear){ // Method - any function that is attached to an object
+  //   return 2022 - birthYear;
+  // }
+
+  // calcAge: function () {
+  //   // this - points to 'this' object
+  //   console.log(this);
+  //   return 2022 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2022 - this.birthYear; // creates new property in the object called 'age' and assign the value.
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${
+      this.firstName
+    } is ${this.calcAge()} years old, and she has ${(this.hasDriversLicense =
+      this.hasDriversLicense ? `a` : `no`)} drivers license.`;
+  },
 };
+
+console.log(ytjt.calcAge(1990));
+console.log(ytjt['calcAge'](1990));
+
+console.log(ytjt.calcAge()); // when have 'this' keyword
+
+console.log(ytjt.age);
+
+// Challenge - getSummary() function
+// "Ytjt is 46-year old, and she has a/no driver's license."
+console.log(ytjt.getSummary());
