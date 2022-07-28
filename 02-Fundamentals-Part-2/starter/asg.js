@@ -32,8 +32,22 @@
 
 /* ----- LECTURE 03: ARROW FUNCTIONS ----- */
 
-const percentageOfWorld3 = (population) => `${(population / 7900) * 100}%`;
+// const percentageOfWorld3 = (population) => `${(population / 7900) * 100}%`;
 
-console.log(percentageOfWorld3(33.8));
-console.log(percentageOfWorld3(51.98));
-console.log(percentageOfWorld3(124.9));
+// console.log(percentageOfWorld3(33.8));
+// console.log(percentageOfWorld3(51.98));
+// console.log(percentageOfWorld3(124.9));
+
+/* ----- LECTURE 04: FUNCTIONS CALLING OTHER FUNCTIONS ----- */
+function percentageOfWorld1(population) {
+  const worldPopulation = 7900;
+  return `${(population / worldPopulation) * 100}%`;
+}
+const describePopulation = (country, population) =>
+  `${country} has ${population} million people which is about ${percentageOfWorld1(
+    population
+  )} of the world.`;
+
+console.log(describePopulation('China', 1441));
+console.log(describePopulation('South Korea', 51.98));
+console.log(describePopulation('Japan', 124.9));
