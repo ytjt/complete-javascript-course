@@ -303,24 +303,34 @@
 
 /* ---- LOOPING ARRAYS BACKWARDS & LOOPS IN LOOPS (NESTED LOOPS) ---- */
 
-// Loop arrays backwards
-const ytjtArray = [
-  'Ytjt',
-  2037 - 2020,
-  'Iykyk',
-  ['Jiwon', 'Yuna', 'Sooyoung'],
-  false,
-];
+// // Loop arrays backwards
+// const ytjtArray = [
+//   'Ytjt',
+//   2037 - 2020,
+//   'Iykyk',
+//   ['Jiwon', 'Yuna', 'Sooyoung'],
+//   false,
+// ];
 
-for (let i = ytjtArray.length - 1; i >= 0; i--) {
-  console.log(i, ytjtArray[i]);
-}
+// for (let i = ytjtArray.length - 1; i >= 0; i--) {
+//   console.log(i, ytjtArray[i]);
+// }
 
-// Nested Loop
-for( let exercise = 1; exercise < 4; exercise++){
-  console.log(`------ Starting exercise ${exercise}`);
+// // Nested Loop
+// for( let exercise = 1; exercise < 4; exercise++){
+//   console.log(`------ Starting exercise ${exercise}`);
 
-  for(let rep = 1; rep < 6; rep++){
-    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 😇`);
-  }
+//   for(let rep = 1; rep < 6; rep++){
+//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 😇`);
+//   }
+// }
+
+/* ---- WHILE LOOP ---- */
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  dice === 6 ? console.log('Loop is about to end..') : null;
 }
