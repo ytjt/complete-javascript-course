@@ -31,31 +31,47 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
+  /* -- WHEN THERE IS NO INPUT -- */
   if (!guess) {
     // empty input = 0 = is a falsy value
     document.querySelector('.message').textContent = 'NO NUMBER?! >:(';
+
     score--;
     document.querySelector('.score').textContent = score;
+
+    /* -- WHEN THE GUESS IS CORRECT -- */
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'CORRECT! :D';
+
+    document.querySelector('body').style.backgroundColor = '#60b347';
+
+    document.querySelector('.number').style.width = '30rem'; // needs to specify string that contains number and unit.
+
+    /* -- WHEN THE GUESS IS TOO HIGH -- */
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'ITS TOO HIGH >.<';
+
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent =
         'YOU LOST THE GAME. BRUH?!';
+
       document.querySelector('.score').textContent = 0;
     }
+
+    /* -- WHEN THE GUESS IS TOO LOW -- */
   } else if (guess < secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'ITS TOO LOW >.<';
+
       score--;
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent =
         'YOU LOST THE GAME. BRUH?!';
+
       document.querySelector('.score').textContent = 0;
     }
   }
