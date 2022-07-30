@@ -73,7 +73,7 @@
 
 /* ----- LECTURE 06: BASIC ARRAYS OPERATIONS (METHODS) ----- */
 
-const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
+// const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
 // console.log(neighbours);
 
 // neighbours.push('Utopia');
@@ -95,24 +95,46 @@ const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
 
 /* ----- LECTURE 07: INTRODUCTION TO OBJECTS ----- */
 
+// const myCountry = {
+//   country: 'Malaysia',
+//   capital: 'Kuala Lumpur',
+//   language: 'Bahasa Melayu',
+//   population: 33.8,
+// };
+
+// console.log(myCountry);
+
+/* ----- LECTURE 08: DOT VS. BRACKET NOTATION ----- */
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${neighbours.length} neighbouring countries and a capital called ${myCountry.capital}. `
+// );
+
+// myCountry.population += 2;
+// console.log(myCountry.population);
+
+// myCountry['population'] -= 2;
+// const key = 'lation';
+// console.log(myCountry['popu' + key]);
+
+/* ----- LECTURE 09: OBJECT METHODS ----- */
 const myCountry = {
   country: 'Malaysia',
   capital: 'Kuala Lumpur',
   language: 'Bahasa Melayu',
   population: 33.8,
+  neighbours: ['Singapore', 'Brunei', 'Indonesia', 'Thailand'],
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}. `
+    );
+  },
+
+  checkIsland: function () {
+    !this.neighbours ? (this.isIsland = true) : (this.isIsland = false);
+    return this.isIsland;
+  },
 };
 
-console.log(myCountry);
-
-/* ----- LECTURE 08: DOT VS. BRACKET NOTATION ----- */
-
-console.log(
-  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${neighbours.length} neighbouring countries and a capital called ${myCountry.capital}. `
-);
-
-myCountry.population += 2;
-console.log(myCountry.population);
-
-myCountry['population'] -= 2;
-const key = 'lation';
-console.log(myCountry['popu' + key]);
+myCountry.describe();
+console.log(myCountry.checkIsland());
