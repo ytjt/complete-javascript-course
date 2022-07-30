@@ -19,7 +19,7 @@ console.log(document.querySelector('.guess').value); */
 let score = 20; // state variable (part of application state)
 
 // THE SECRET NUMBER
-const secretNumber = Math.trunc(Math.random() * 20 + 1); // gives number between 0 and 1, Math.trunc() to remove the decimals, * 20 because we want 0 - 20, + 1 is to elevate until 20 (or else max is 19.99999999999999 and remove d.p will just give until 19)
+let secretNumber = Math.trunc(Math.random() * 20 + 1); // gives number between 0 and 1, Math.trunc() to remove the decimals, * 20 because we want 0 - 20, + 1 is to elevate until 20 (or else max is 19.99999999999999 and remove d.p will just give until 19)
 
 // EVENT - something that happens on the page (mouse click, mouse moving, keypress etc.)
 //.addEventListener(name of the event that we are listening for, (what to do - event handler) function value);
@@ -51,7 +51,7 @@ document.querySelector('.check').addEventListener('click', function () {
     /* -- WHEN THE GUESS IS TOO HIGH -- */
   } else if (guess > secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = 'ITS TOO HIGH >.<';
+      document.querySelector('.message').textContent = '😿 ITS TOO HIGH >.<';
 
       score--;
       document.querySelector('.score').textContent = score;
@@ -65,7 +65,7 @@ document.querySelector('.check').addEventListener('click', function () {
     /* -- WHEN THE GUESS IS TOO LOW -- */
   } else if (guess < secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = 'ITS TOO LOW >.<';
+      document.querySelector('.message').textContent = '😿 ITS TOO LOW >.<';
 
       score--;
       document.querySelector('.score').textContent = score;
@@ -76,4 +76,14 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+});
+
+document.querySelector('.again').addEventListener('click', function () {
+  document.querySelector('.score').textContent = 20;
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
 });
