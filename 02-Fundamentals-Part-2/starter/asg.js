@@ -145,15 +145,17 @@ console.log(population, percentages);
 //   console.log(`Voter number ${i} is currently voting`);
 // }
 
-/* ----- LECTURE 10: ITERATION: THE FOR LOOP ----- */
+/* ----- LECTURE 11: LOOPING ARRAYS, BREAKING AND CONTINUING ----- */
 
 function percentageOfWorld1(population) {
   const worldPopulation = 7900;
-  return `${(population / worldPopulation) * 100}%`;
+  return (population / worldPopulation) * 100;
 }
 
 const percentages2 = [];
 for (let i = 0; i < population.length; i++) {
   percentages2[i] = percentageOfWorld1(population[i]);
+  // const p2 = percentageOfWorld1(population[i]);
+  // percentages2.push(p2);
 }
 console.log(percentages2);
