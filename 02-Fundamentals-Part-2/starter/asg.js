@@ -118,23 +118,29 @@
 // console.log(myCountry['popu' + key]);
 
 /* ----- LECTURE 09: OBJECT METHODS ----- */
-const myCountry = {
-  country: 'Malaysia',
-  capital: 'Kuala Lumpur',
-  language: 'Bahasa Melayu',
-  population: 33.8,
-  neighbours: ['Singapore', 'Brunei', 'Indonesia', 'Thailand'],
-  describe: function () {
-    console.log(
-      `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}. `
-    );
-  },
+// const myCountry = {
+//   country: 'Malaysia',
+//   capital: 'Kuala Lumpur',
+//   language: 'Bahasa Melayu',
+//   population: 33.8,
+//   neighbours: ['Singapore', 'Brunei', 'Indonesia', 'Thailand'],
+//   describe: function () {
+//     console.log(
+//       `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}. `
+//     );
+//   },
 
-  checkIsland: function () {
-    !this.neighbours ? (this.isIsland = true) : (this.isIsland = false);
-    return this.isIsland;
-  },
-};
+//   checkIsland: function () {
+//     !this.neighbours ? (this.isIsland = true) : (this.isIsland = false);
+//     return this.isIsland;
+//   },
+// };
 
-myCountry.describe();
-console.log(myCountry.checkIsland());
+// myCountry.describe();
+// console.log(myCountry.checkIsland());
+
+/* ----- LECTURE 10: ITERATION: THE FOR LOOP ----- */
+
+for (let i = 1; i <= 50; i++) {
+  console.log(`Voter number ${i} is currently voting`);
+}
