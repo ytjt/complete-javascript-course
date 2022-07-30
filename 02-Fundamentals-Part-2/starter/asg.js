@@ -73,22 +73,33 @@
 
 /* ----- LECTURE 06: BASIC ARRAYS OPERATIONS (METHODS) ----- */
 
-const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
-console.log(neighbours);
+// const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
+// console.log(neighbours);
 
-neighbours.push('Utopia');
-console.log(neighbours);
+// neighbours.push('Utopia');
+// console.log(neighbours);
 
-neighbours.pop();
-console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
 
-console.log(
-  `${
-    !neighbours.includes('Germany')
-      ? 'Probably not a central European Country'
-      : null
-  }`
-);
+// console.log(
+//   `${
+//     !neighbours.includes('Germany')
+//       ? 'Probably not a central European Country'
+//       : null
+//   }`
+// );
 
-neighbours[neighbours.indexOf('Indonesia')] = 'Republic of Indonesia';
-console.log(neighbours);
+// neighbours[neighbours.indexOf('Indonesia')] = 'Republic of Indonesia';
+// console.log(neighbours);
+
+/* ----- LECTURE 07: INTRODUCTION TO OBJECTS ----- */
+
+const myCountry = {
+  country: 'South Korea',
+  capital: 'Seoul',
+  language: 'Hangul',
+  population: 51.98,
+};
+
+console.log(myCountry);
