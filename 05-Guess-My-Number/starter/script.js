@@ -21,8 +21,6 @@ let score = 20; // state variable (part of application state)
 // THE SECRET NUMBER
 const secretNumber = Math.trunc(Math.random() * 20 + 1); // gives number between 0 and 1, Math.trunc() to remove the decimals, * 20 because we want 0 - 20, + 1 is to elevate until 20 (or else max is 19.99999999999999 and remove d.p will just give until 19)
 
-document.querySelector('.number').textContent = secretNumber;
-
 // EVENT - something that happens on the page (mouse click, mouse moving, keypress etc.)
 //.addEventListener(name of the event that we are listening for, (what to do - event handler) function value);
 document.querySelector('.check').addEventListener('click', function () {
@@ -46,6 +44,9 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
 
     document.querySelector('.number').style.width = '30rem'; // needs to specify string that contains number and unit.
+
+    // Display the correct guessed number
+    document.querySelector('.number').textContent = secretNumber;
 
     /* -- WHEN THE GUESS IS TOO HIGH -- */
   } else if (guess > secretNumber) {
