@@ -24,7 +24,6 @@ let highScore = 0;
 // THE SECRET NUMBER
 let secretNumber = Math.trunc(Math.random() * 20 + 1); // gives number between 0 and 1, Math.trunc() to remove the decimals, * 20 because we want 0 - 20, + 1 is to elevate until 20 (or else max is 19.99999999999999 and remove d.p will just give until 19)
 
-console.log(secretNumber);
 // EVENT - something that happens on the page (mouse click, mouse moving, keypress etc.)
 //.addEventListener(name of the event that we are listening for, (what to do - event handler) function value);
 document.querySelector('.check').addEventListener('click', function () {
@@ -98,5 +97,4 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.number').textContent = '?';
   document.querySelector('.message').textContent = 'Start guessing...';
   secretNumber = Math.trunc(Math.random() * 20 + 1);
-  console.log(secretNumber);
 });
