@@ -52,3 +52,21 @@
 // console.log(describePopulation('China', 1441));
 // console.log(describePopulation('South Korea', 51.98));
 // console.log(describePopulation('Japan', 124.9));
+
+/* ----- LECTURE 05: INTRODUCTION TO ARRAYS ----- */
+
+const population = [33.8, 51.98, 124.9, 5.82];
+
+console.log(population.length == 4);
+
+function percentageOfWorld1(population) {
+  const worldPopulation = 7900;
+  return `${(population / worldPopulation) * 100}%`;
+}
+const percentages = [
+  `${percentageOfWorld1(population[0])}`,
+  `${percentageOfWorld1(population[1])}`,
+  `${percentageOfWorld1(population[2])}`,
+  `${percentageOfWorld1(population[3])}`,
+];
+console.log(population, percentages);
