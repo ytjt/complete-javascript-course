@@ -73,7 +73,7 @@
 
 /* ----- LECTURE 06: BASIC ARRAYS OPERATIONS (METHODS) ----- */
 
-// const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
+const neighbours = ['Singapore', 'Brunei', 'Indonesia', 'Thailand'];
 // console.log(neighbours);
 
 // neighbours.push('Utopia');
@@ -96,10 +96,23 @@
 /* ----- LECTURE 07: INTRODUCTION TO OBJECTS ----- */
 
 const myCountry = {
-  country: 'South Korea',
-  capital: 'Seoul',
-  language: 'Hangul',
-  population: 51.98,
+  country: 'Malaysia',
+  capital: 'Kuala Lumpur',
+  language: 'Bahasa Melayu',
+  population: 33.8,
 };
 
 console.log(myCountry);
+
+/* ----- LECTURE 08: DOT VS. BRACKET NOTATION ----- */
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${neighbours.length} neighbouring countries and a capital called ${myCountry.capital}. `
+);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+const key = 'lation';
+console.log(myCountry['popu' + key]);
