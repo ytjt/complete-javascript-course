@@ -24,8 +24,16 @@ let highScore = 0;
 // THE SECRET NUMBER
 let secretNumber = Math.trunc(Math.random() * 20 + 1); // gives number between 0 and 1, Math.trunc() to remove the decimals, * 20 because we want 0 - 20, + 1 is to elevate until 20 (or else max is 19.99999999999999 and remove d.p will just give until 19)
 
+// FUNCTION
+const displayMessage = message =>
+  (document.querySelector('.message').textContent = message);
+
+const displayScore = score =>
+  (document.querySelector('.score').textContent = score);
+
 // EVENT - something that happens on the page (mouse click, mouse moving, keypress etc.)
 //.addEventListener(name of the event that we are listening for, (what to do - event handler) function value);
+
 document.querySelector('.check').addEventListener('click', function () {
   //   console.log(document.querySelector('.guess').value);
 
@@ -35,14 +43,11 @@ document.querySelector('.check').addEventListener('click', function () {
   /* -- WHEN THERE IS NO INPUT -- */
   if (!guess) {
     // empty input = 0 = is a falsy value
-    document.querySelector('.message').textContent = 'NO NUMBER?! >:(';
-
-    score--;
-    document.querySelector('.score').textContent = score;
+    displayMessage('NO NUMBER?! >:(');
 
     /* -- WHEN THE GUESS IS CORRECT -- */
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'CORRECT! :D';
+    displayMessage('CORRECT! :D');
 
     document.querySelector('body').style.backgroundColor = '#60b347';
 
@@ -57,32 +62,16 @@ document.querySelector('.check').addEventListener('click', function () {
     //Display the highscore.
     document.querySelector('.highscore').textContent = highScore;
 
-    /* -- WHEN THE GUESS IS TOO HIGH -- */
-  } else if (guess > secretNumber) {
+    /* -- WHEN THE GUESS IS WRONG -- */
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '😿 ITS TOO HIGH >.<';
-
-      score--;
-      document.querySelector('.score').textContent = score;
+      displayMessage(
+        guess > secretNumber ? '😿 ITS TOO HIGH >.<' : '😿 ITS TOO LOW >.<'
+      );
+      displayScore(score--);
     } else {
-      document.querySelector('.message').textContent =
-        'YOU LOST THE GAME. BRUH?!';
-
-      document.querySelector('.score').textContent = 0;
-    }
-
-    /* -- WHEN THE GUESS IS TOO LOW -- */
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '😿 ITS TOO LOW >.<';
-
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent =
-        'YOU LOST THE GAME. BRUH?!';
-
-      document.querySelector('.score').textContent = 0;
+      displayMessage('YOU LOST THE GAME. BRUH?!');
+      displayScore(0);
     }
   }
 });
@@ -90,7 +79,7 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   // document.querySelector('.score').textContent = 20;
   score = 20;
-  document.querySelector('.score').textContent = score;
+  displayScore(score);
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.number').style.width = '15rem';
