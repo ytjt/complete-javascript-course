@@ -1,20 +1,4 @@
 'use strict';
-
-/* console.log(document.querySelector('.message'));
-console.log(document.querySelector('.message').textContent);
-
-document.querySelector('.message').textContent = 'YA BETHOOOOL!!';
-console.log(document.querySelector('.message').textContent);
-
-document.querySelector('.number').textContent = 13;
-document.querySelector('.score').textContent = 21;
-
-console.log(document.querySelector('.guess').value);
-document.querySelector('.guess').value = 21;
-
-console.log(document.querySelector('.guess').value); */
-
-/* ------------------------- HANDLING CLICK EVENTS ------------------------- */
 // SCORE TO BE MUTATED
 let score = 20; // state variable (part of application state)
 
