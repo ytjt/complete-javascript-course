@@ -173,14 +173,15 @@
 const population = [33.8, 51.98, 124.9, 5.82];
 
 function percentageOfWorld1(population) {
-  const worldPopulation = 7900;
-  return (population / worldPopulation) * 100;
+  return (population / 7900) * 100;
 }
 
 const percentages3 = [];
 let i = 0;
 while (i < population.length) {
-  const per3 = percentageOfWorld1(population[i]);
-  percentages3.push(per3);
+  const p3 = percentageOfWorld1(population[i]);
+  percentages3.push(p3);
+  i++;
 }
+
 console.log(percentages3);
