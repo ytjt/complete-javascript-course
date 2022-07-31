@@ -55,7 +55,7 @@
 
 /* ----- LECTURE 05: INTRODUCTION TO ARRAYS ----- */
 
-const population = [33.8, 51.98, 124.9, 5.82];
+// const population = [33.8, 51.98, 124.9, 5.82];
 
 // console.log(population.length == 4);
 
@@ -63,13 +63,13 @@ const population = [33.8, 51.98, 124.9, 5.82];
 //   const worldPopulation = 7900;
 //   return (population / worldPopulation) * 100;
 // }
-const percentages = [
-  percentageOfWorld1(population[0]),
-  percentageOfWorld1(population[1]),
-  percentageOfWorld1(population[2]),
-  percentageOfWorld1(population[3]),
-];
-console.log(population, percentages);
+// const percentages = [
+//   percentageOfWorld1(population[0]),
+//   percentageOfWorld1(population[1]),
+//   percentageOfWorld1(population[2]),
+//   percentageOfWorld1(population[3]),
+// ];
+// console.log(population, percentages);
 
 /* ----- LECTURE 06: BASIC ARRAYS OPERATIONS (METHODS) ----- */
 
@@ -147,15 +147,40 @@ console.log(population, percentages);
 
 /* ----- LECTURE 11: LOOPING ARRAYS, BREAKING AND CONTINUING ----- */
 
+// function percentageOfWorld1(population) {
+//   const worldPopulation = 7900;
+//   return (population / worldPopulation) * 100;
+// }
+
+// const percentages2 = [];
+// for (let i = 0; i < population.length; i++) {
+//   percentages2[i] = percentageOfWorld1(population[i]);
+//   // const p2 = percentageOfWorld1(population[i]);
+//   // percentages2.push(p2);
+// }
+// console.log(percentages2);
+
+/* ----- LECTURE 12: LOOPING BACKWARDS AND LOOPS IN LOOPS ----- */
+
+// const listOfNeighbours = [
+//   ['Canada', 'Mexico'],
+//   ['Spain'],
+//   ['Norway', 'Sweden', 'Russia'],
+// ];
+
+/* ----- LECTURE 13: THE WHILE LOOP ----- */
+
+const population = [33.8, 51.98, 124.9, 5.82];
+
 function percentageOfWorld1(population) {
   const worldPopulation = 7900;
   return (population / worldPopulation) * 100;
 }
 
-const percentages2 = [];
-for (let i = 0; i < population.length; i++) {
-  percentages2[i] = percentageOfWorld1(population[i]);
-  // const p2 = percentageOfWorld1(population[i]);
-  // percentages2.push(p2);
+const percentages3 = [];
+let i = 0;
+while (i < population.length) {
+  const per3 = percentageOfWorld1(population[i]);
+  percentages3.push(per3);
 }
-console.log(percentages2);
+console.log(percentages3);
