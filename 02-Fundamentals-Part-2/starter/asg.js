@@ -162,26 +162,32 @@
 
 /* ----- LECTURE 12: LOOPING BACKWARDS AND LOOPS IN LOOPS ----- */
 
-// const listOfNeighbours = [
-//   ['Canada', 'Mexico'],
-//   ['Spain'],
-//   ['Norway', 'Sweden', 'Russia'],
-// ];
+const listOfNeighbours = [
+  ['Canada', 'Mexico'],
+  ['Spain'],
+  ['Norway', 'Sweden', 'Russia'],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let j = 0; j < listOfNeighbours[i].length; j++) {
+    console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+  }
+}
 
 /* ----- LECTURE 13: THE WHILE LOOP ----- */
 
-const population = [33.8, 51.98, 124.9, 5.82];
+// const population = [33.8, 51.98, 124.9, 5.82];
 
-function percentageOfWorld1(population) {
-  return (population / 7900) * 100;
-}
+// function percentageOfWorld1(population) {
+//   return (population / 7900) * 100;
+// }
 
-const percentages3 = [];
-let i = 0;
-while (i < population.length) {
-  const p3 = percentageOfWorld1(population[i]);
-  percentages3.push(p3);
-  i++;
-}
+// const percentages3 = [];
+// let i = 0;
+// while (i < population.length) {
+//   const p3 = percentageOfWorld1(population[i]);
+//   percentages3.push(p3);
+//   i++;
+// }
 
-console.log(percentages3);
+// console.log(percentages3);
