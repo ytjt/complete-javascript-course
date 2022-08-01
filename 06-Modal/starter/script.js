@@ -23,7 +23,7 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 }
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
+  e.key === 'Escape' && !modal.classList.contains('hidden')
+    ? closeModal()
+    : null;
 });
