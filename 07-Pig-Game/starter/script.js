@@ -8,7 +8,7 @@ const elCurrScore0 = document.getElementById('current--0');
 const elCurrScore1 = document.getElementById('current--1');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-
+const btnNew = document.querySelector('.btn--new');
 elementScore0.textContent = '0';
 
 elementScore1.textContent = '0';
@@ -65,4 +65,21 @@ btnHold.addEventListener('click', function () {
       actPlay1.classList.toggle('player--active');
     }
   }
+});
+
+btnNew.addEventListener('click', function () {
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--winner');
+  playing = true;
+  scores = [0, 0];
+  activePlayer = 0;
+  currScore = 0;
+  btnRoll.classList.remove('hidden');
+  btnHold.classList.remove('hidden');
+  document.querySelector(`.player--0`).classList.add('player--active');
+  elCurrScore0.textContent = currScore;
+  elCurrScore1.textContent = currScore;
+  elementScore0.textContent = scores[0];
+  elementScore1.textContent = scores[1];
 });
